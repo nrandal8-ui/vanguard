@@ -134,6 +134,7 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
+    text-align: center;
 }
 
 #hero h1 {
@@ -148,18 +149,19 @@ nav ul li a:hover {
     font-size: 1rem;
     max-width: 600px;
     line-height: 1.6;
+    
 }
 
 #hero button {
     background-color: var(--blue);
     color: var(--white);
     border: none;
-    padding: 0.85rem 2 rem;
+    padding: 1.5rem 2rem;
     font-size: 1rem;
     font-family: var(--font);
     font-weight: 600;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 8px;
     transition: background-color 0.3s;
 }
 
@@ -199,7 +201,42 @@ nav ul li a:hover {
     margin-bottom: 2.5rem;
 }
 
+#services {
+    margin-top: 2rem;
+}
 
+#services h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+#services ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+#services ul li {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1.25rem;
+    border-radius: 6px;
+}
+
+#services ul li h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+#services ul li p {
+    font-size: 0.875rem;
+    color: var(--white);
+    line-height: 1.5;
+}
 
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
