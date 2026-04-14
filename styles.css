@@ -1,7 +1,8 @@
-/* CSS BY YOUR NAME */
+/* CSS BY Nicole Randall */
 
 /* IMPORTED FONTS*/
 /* IMPORT "INTER" FROM GOOGLE FONTS"
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -63,6 +64,13 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
+body {
+    min-width: 400px;
+    font-family: var(--font);
+    color: var(--charcoal);
+    background-color: var(--white); 
+    line-height: 1.6;;
+}
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
@@ -71,6 +79,13 @@ table {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+header {
+    background-color: var(--black);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
