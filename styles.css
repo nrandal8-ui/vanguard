@@ -134,7 +134,7 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
-    text-align: center;
+    
 }
 
 #hero h1 {
@@ -238,6 +238,58 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
+#results {
+    background-color: var(--blue);
+    padding: 4rem 0;
+    color: var(--white);
+}
+
+#results h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+#results > .container > p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+#results-grid {
+    display: grid;
+    flex-direction: column;
+    
+    gap: 2rem;
+}
+
+#profits h3,
+#growth h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+#profits table {
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+#profits th,
+#profits td {
+    padding: 0.75rem;
+    text-align: left;
+    
+}
+
+#profits thead th {
+    background-color: var(--charcoal);
+    font-weight: 700;
+}
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -257,7 +309,7 @@ nav ul li a:hover {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 0.5s ease-in-out;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -286,7 +338,7 @@ nav ul li a:hover {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
-
+@media (min-width: 768px) {
     #results {
         grid-template-columns: 1fr 1fr;
     }
@@ -300,6 +352,22 @@ nav ul li a:hover {
     .bar-chart {
         width: 50%;
     }
+}
 
 
 /* MEDIA QUERIES (LARGE) */
+@media (min-width: 1024px) {
+    #results {
+        grid-template-columns: 1fr 1fr;
+    }
+    .results-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .results-table {
+        width: 50%;
+    }
+    .bar-chart {
+        width: 50%;
+    }
+}
