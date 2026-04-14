@@ -69,7 +69,7 @@ body {
     font-family: var(--font);
     color: var(--charcoal);
     background-color: var(--white); 
-    line-height: 1.6;;
+    line-height: 1.6;
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
@@ -168,15 +168,39 @@ nav ul li a:hover {
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+ .hero-content::before {
     content: "";
-
+    display: block;
+    position: relative;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
+    margin: 0 auto 0.5rem;
 }
+
+#about {
+    background-color: var(--white);
+    padding: 4rem 0;
+}
+
+#about h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+#about > .container > p {
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    max-width: 800px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
