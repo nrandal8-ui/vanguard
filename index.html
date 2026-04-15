@@ -199,5 +199,15 @@
         <p>&copy; 2025 Vanguard. All rights reserved.</p>
         </div>
         </footer>
+
+        <script>
+            // JavaScript for hamburger menu toggle
+            const hamburgerToggle = document.getElementById('hamburger-toggle');
+            const navMenu = document.querySelector('nav ul');
+
+            hamburgerToggle.addEventListener('change', () => {
+                navMenu.classList.toggle('open', hamburgerToggle.checked);
+            });
+        </script>
 </body>
 </html>
