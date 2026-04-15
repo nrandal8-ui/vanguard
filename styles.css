@@ -81,6 +81,28 @@ body {
     margin: 0 auto;
 }
 
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ ul {
+    display: flex;
+}
+
+#menu-toggle:checked ~ label span {
+    background-color: transparent;
+}
+
+#menu-toggle:checked ~ label span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#menu-toggle:checked ~ label span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
 header {
     background-color: var(--black);
     position: sticky;
@@ -110,6 +132,7 @@ nav ul {
     padding: 1rem 0;
     gap: 1rem;
     text-align: right;
+    padding-right: 1rem;
 }
 
 nav ul.open {
@@ -133,6 +156,44 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--blue);
 }
+
+nav h2 {
+    display: none;
+}
+
+nav label {
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+nav label span,
+nav label span::before,
+nav label span::after {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease;
+}  
+
+nav label span::before,
+nav label span::after {
+    content: '';
+    position: absolute;
+}
+
+nav label span::before {
+    top: -8px;
+}
+
+nav label span::after {
+    top: 8px;
+}
+
+
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
 #hero {
@@ -481,12 +542,17 @@ footer a:hover {
         display: none;
     }
 
+    nav label {
+        display: none;
+    }
+
     nav ul {
         display: flex;
         gap: 2rem;
         flex-direction: row;
         width: auto;
         padding: 0;
+        text-align: left;
     }
 
     #results-table {
@@ -560,7 +626,7 @@ footer a:hover {
 
     #bar-chart {
         width: 100%;
-        height: 225px;
+        height: 240px;
     }
 
     #services ul {

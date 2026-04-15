@@ -16,11 +16,13 @@
 <header>  
     <nav> 
         <div class="container">
+        <input type="checkbox" id="menu-toggle">    
         <a href="#" class="logo">
         <img src="images/vanguard-logo.svg" alt="Vanguard logo"></a>
-        
-        <button class="hamburger" id="hamburger">&#9776;</button>
-        <ul id="nav-menu">
+        <h2>Main Navigation</h2>
+            
+            <label for="menu-toggle"><span></span></label>
+            <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -199,15 +201,5 @@
         <p>&copy; 2025 Vanguard. All rights reserved.</p>
         </div>
         </footer>
-
-        <script>
-            // JavaScript for hamburger menu toggle
-            const hamburgerToggle = document.getElementById('hamburger');
-            const navMenu = document.querySelector('nav ul');
-
-            hamburgerToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('open');
-            });
-        </script>
-</body>
+       </body>
 </html>
