@@ -304,8 +304,10 @@ nav ul li a:hover {
 #growth h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     color: var(--white);
+    padding-top: 1rem;
+    
 }
 
 #profits table {
@@ -320,13 +322,25 @@ nav ul li a:hover {
 #profits th,
 #profits td {
     padding: 0.75rem;
-    text-align: left;
+    text-align: center;
     
 }
 
 #profits thead th {
     background-color: var(--charcoal);
     font-weight: 700;
+}
+
+#growth {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    
+}
+
+#growth h3 {
+     margin-bottom: 1rem;
+    
 }
 
 /* THIS ONE IS DONE FOR YOU */
@@ -546,6 +560,7 @@ footer a:hover {
 
     #bar-chart {
         width: 100%;
+        height: 225px;
     }
 
     #services ul {
