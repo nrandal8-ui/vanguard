@@ -93,6 +93,8 @@ nav .container {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 nav .logo img {
@@ -107,10 +109,14 @@ nav ul {
     background-color: var(--black);
     padding: 1rem 0;
     gap: 1rem;
+    text-align: right;
 }
 
 nav ul.open {
     display: flex;
+    text-align: right;
+    padding-right: 1rem;
+    
 }
 
 nav ul li a {
@@ -198,6 +204,7 @@ nav ul li a:hover {
     color: var(--white);
     font-size: 1.5rem;
     cursor: pointer;
+    margin-left: auto;
 }
 
 #about {
@@ -242,7 +249,12 @@ nav ul li a:hover {
     color: var(--white);
     padding: 1.25rem;
     border-radius: 6px;
+    transition: transform 0.15s ease; 
 }
+
+#services ul li:hover {
+    transform: translateY(-5px);
+} 
 
 #services ul li h3 {
     font-size: 1rem;

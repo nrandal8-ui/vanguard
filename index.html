@@ -19,8 +19,8 @@
         <a href="#" class="logo">
         <img src="images/vanguard-logo.svg" alt="Vanguard logo"></a>
         
-        <label for="hamburger-toggle" class="hamburger">&#9776;</label>
-        <ul>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <ul id="nav-menu">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -202,11 +202,11 @@
 
         <script>
             // JavaScript for hamburger menu toggle
-            const hamburgerToggle = document.getElementById('hamburger-toggle');
+            const hamburgerToggle = document.getElementById('hamburger');
             const navMenu = document.querySelector('nav ul');
 
-            hamburgerToggle.addEventListener('change', () => {
-                navMenu.classList.toggle('open', hamburgerToggle.checked);
+            hamburgerToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
             });
         </script>
 </body>
