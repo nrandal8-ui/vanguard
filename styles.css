@@ -101,8 +101,16 @@ nav .logo img {
 }
 
 nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--black);
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+nav ul.open {
     display: flex;
-    gap: 2rem;
 }
 
 nav ul li a {
@@ -112,6 +120,8 @@ nav ul li a {
     font-size: 0.95rem;
     letter-spacing: 0.05em;
     transition: color 0.3s;
+    padding: 0.5rem 0;
+    display: block;
 }
 
 nav ul li a:hover {
@@ -156,7 +166,7 @@ nav ul li a:hover {
     background-color: var(--blue);
     color: var(--white);
     border: none;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     font-size: 1rem;
     font-family: var(--font);
     font-weight: 600;
@@ -179,6 +189,15 @@ nav ul li a:hover {
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
     margin: 0 auto 0.5rem;
+}
+
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 #about {
@@ -242,6 +261,7 @@ nav ul li a:hover {
     background-color: var(--blue);
     padding: 4rem 0;
     color: var(--white);
+    
 }
 
 #results h2 {
@@ -263,9 +283,9 @@ nav ul li a:hover {
     align-items: start;
 }
 
-#profits, 
+#profits,
 #growth {
-    width: 100%;;
+    min-width: 0;
 }
 
 #profits h3,
@@ -281,6 +301,7 @@ nav ul li a:hover {
     font-size: 0.9rem;
     color: var(--white);
     background-color: var(--black);
+    table-layout: fixed;
 }
 
 #profits th,
@@ -429,18 +450,25 @@ footer a:hover {
 
 /* MEDIA QUERIES (MEDIUM) */ 
 @media (min-width: 768px) {
-    #results {
-        grid-template-columns: 1fr 1fr;
+    .hamburger {
+        display: none;
     }
-    .results-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .results-table {
-        grid-template-columns: 1fr 1fr;
+
+    nav ul {
+        display: flex;
         gap: 2rem;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
     }
-    .bar-chart {
+
+    #results-table {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+        align-items: start;
+    }
+    #bar-chart {
         width: 50%;
     }
 
@@ -465,7 +493,7 @@ footer a:hover {
     }
 
     #hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
     }
 }
 
@@ -475,11 +503,11 @@ footer a:hover {
     #results {
         grid-template-columns: 1fr 1fr;
     }
-    .results-container {
+    #results-container {
         flex-direction: row;
         justify-content: space-between;
     }
-    .results-table {
+    #results-table {
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
     }
@@ -495,14 +523,14 @@ footer a:hover {
 
     .submit-group {
         grid-column: 2 / 3;
-        align-self: flex-end;
+        align-self: end;
     }
 
     .form-group--full {
         grid-column: 1 / -1;
     }
 
-    .bar-chart {
+    #bar-chart {
         width: 50%;
     }
 
